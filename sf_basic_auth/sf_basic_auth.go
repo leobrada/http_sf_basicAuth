@@ -1,39 +1,20 @@
-/*
-Router ==> (req, resp.writer) ==> Middlewarei(MFA) ==> (modified req) ==> Function(MFA)
-                                                                            |
-                                                                            |
-Return error(ok or not ok) to router <==  Middleware <==  (http packet) <==
-                                                |
-                                                |
-                Send response to client   <=====
-
-Router ==> (req, resp.writer) ==> Middleware ==> retrieve userinfo from req; query pdp for userpw
-                                                                    |
-                                                                    |
-                                                 ok or not ok    <==
-*/
-
-package serviceFunction
+package sf_basic_auth
 
 import (
   "fmt"
   "net/http"
 )
 
-type ServiceFunction interface {
-  ApplyFunction(w http.ResponseWriter, req *http.Request) (bool)
-}
-
-type ServiceFunctionName struct {
+type SFBasicAuth struct {
     name string
     // TODO: dst_pdp string, // indicates where the pdp is located
 }
 
-func NewServiceFunction(name string) *ServiceFunctionName {
-    return &ServiceFunctionName{name: name}
+func NewSFBasicAuth() SFBasicAuth {
+    return SFBasicAuth{name: "basic_auth"}
 }
 
-func (mw *ServiceFunctionName) ApplyFunction(w http.ResponseWriter, req *http.Request) bool {
+func (sf SFBasicAuth) ApplyFunction(w http.ResponseWriter, req *http.Request) bool {
   var username, password string
   form := `<html>
       <body>

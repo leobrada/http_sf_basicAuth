@@ -1,0 +1,5 @@
+github.com/leobrada/golang_utility v0.0.0-20201008112343-ac40ae0d8f37/go.mod h1:1/G5yIBxiW76Epg0aaB/NsWUZOURLSDK30Zvqv3pv+w=
+github.com/leobrada/http_sf_template v0.0.0-20201012181417-345bb7fa0a8d h1:qc0DWUZb+jzfJr+ondoL/JY9hjEGSsQZED1NgJeK2tw=
+github.com/leobrada/http_sf_template v0.0.0-20201012181417-345bb7fa0a8d/go.mod h1:PhWkmU1OBFA7JnHRrsLoQE/11fuS+HqNDr95h0Yg9AQ=
+github.com/subosito/gotenv v1.2.0 h1:Slr1R9HxAlEKefgq5jn9U+DnETlIUa6HfgEzj0g5d7s=
+github.com/subosito/gotenv v1.2.0/go.mod h1:N0PQaV/YGNqwC0u51sEeR/aUtSLEXKX9iv69rRypqCw=
